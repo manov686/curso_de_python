@@ -24,13 +24,18 @@ contrário disso:
 O primeiro dígito do CPF é 7
 """
 
-cpf_enviado = input('Digite o CPF: ')\
-    .replace('.', '')\
-    .replace('-', '')\
-    .replace('/', '')\
-    .replace(' ', '')
+# cpf_enviado = input('Digite o CPF: ')\
+#     .replace('.', '')\
+#     .replace('-', '')\
+#     .replace('/', '')\
+#     .replace(' ', '')
 
-if len(cpf_enviado) != 11:
+import re
+
+cpf_enviado = re.sub(r'[^0-9]', '', input('Digite o CPF: '))
+entrada_repetida = cpf_enviado == cpf_enviado[0] * len(cpf_enviado)
+
+if len(cpf_enviado) != 11 or entrada_repetida:
     print('CPF inválido!')
     exit()
 
