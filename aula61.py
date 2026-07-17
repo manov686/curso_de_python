@@ -41,7 +41,7 @@ O primeiro dígito do CPF é 7
 
 import random
 
-for _ in range(100):
+for _ in range(1):
     nove_digitos = ''
     for i in range(9):
         nove_digitos += str(random.randint(0, 9))
