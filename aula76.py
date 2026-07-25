@@ -24,6 +24,3 @@ pessoa.setdefault('idade', 0)
 
 for chave, valor in pessoa.items():
     print(chave, valor)
-
-# for chave, valor in pessoa.items():
-#     print(chave, valor)
