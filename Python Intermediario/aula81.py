@@ -1,4 +1,5 @@
 # Introdução à função lambda (função anônima de uma linha)
+
 # A função lambda é uma função como qualquer
 # outra em Python. Porém, são funções anônimas
 # que contém apenas uma linha. Ou seja, tudo
