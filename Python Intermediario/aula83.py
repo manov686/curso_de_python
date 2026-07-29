@@ -1,6 +1,6 @@
 # Empacotamento e desempacotamento de dicionários
-a, b = 1, 2
-a, b = b, a
+# a, b = 1, 2
+# a, b = b, a
 # print(a, b)
 
 
@@ -30,8 +30,6 @@ a, b = b, a
 
 
 def mostro_argumentos_nomeados(*args, **kwargs):
-    print('NÃO NOMEADOS:', args)
-
     for chave, valor in kwargs.items():
         print(chave, valor)
 
