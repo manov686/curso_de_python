@@ -15,8 +15,8 @@ dc = {
 
 lista = [
     ('a', 'valor a'),
-    ('b', 'valor a'),
-    ('b', 'valor a'),
+    ('b', 'valor B'),
+    ('c', 'valor c'),
 ]
 dc = {
     chave: valor
