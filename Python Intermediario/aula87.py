@@ -17,6 +17,7 @@ for item in lista:
     elif isinstance(item, (int, float)):
         print('NUM')
         print(item, item * 2)
+            
     else:
         print('OUTRO')
         print(item)
