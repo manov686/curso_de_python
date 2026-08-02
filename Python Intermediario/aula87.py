@@ -1,23 +1,32 @@
-# isinstace - para saber se objeto é de determinado tipo
+# isinstance() - verifica se um objeto é de um determinado tipo
+
 lista = [
-    'a', 1, 1.1, True, [0, 1, 2], (1, 2),
-    {0, 1}, {'nome': 'Luiz'},
+    'a',
+    1,
+    1.1,
+    True,
+    [0, 1, 2],
+    (1, 2),
+    {0, 1},
+    {'nome': 'Luiz'},
 ]
 
 for item in lista:
     if isinstance(item, set):
         print('SET')
         item.add(5)
-        print(item, isinstance(item, set))
+        resultado = item
 
     elif isinstance(item, str):
         print('STR')
-        print(item.upper())
+        resultado = item.upper()
 
     elif isinstance(item, (int, float)):
         print('NUM')
-        print(item, item * 2)
-            
+        resultado = item * 2
+
     else:
         print('OUTRO')
-        print(item)
+        resultado = item
+
+    print(resultado)
