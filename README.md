@@ -1,5 +1,5 @@
-# 🐍 Curso de Python 3+
+# 🐍 Python 3+ Course
 
-Exercícios, exemplos e projetos desenvolvidos durante o curso **Python 3+ Completo**, do professor **Luiz Otávio Miranda**, na Udemy.
+📚This repository contains the exercises, challenges, and projects developed while taking the Complete Python 3+ course by Luiz Otávio Miranda on Udemy.
 
-📚 Este repositório acompanha meu progresso ao longo das aulas.
+The files are organized according to the course progression and serve as a record of my learning journey and Python practice.
