@@ -10,9 +10,10 @@ try:
     c = a/b
 except NameError:
     print('Variável não definida!')
-except ZeroDivisionError:
-    print('Não é possível dividir por zero!')
+except ZeroDivisionError as e:
+    print(e.__class__.__name__)
+    print(e)
 except Exception as error:
-    print(f'Ocorreu um erro: {error.__class__}')
+    print(f'Ocorreu um erro: {error.__class__.__name__}')
 
 print('O código continua...')
