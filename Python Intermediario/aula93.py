@@ -12,7 +12,7 @@ except NameError:
     print('Variável não definida!')
 except ZeroDivisionError:
     print('Não é possível dividir por zero!')
-except Exception as erro:
-    print(f'Ocorreu um erro: {erro.__class__}')
+except Exception as error:
+    print(f'Ocorreu um erro: {error.__class__}')
 
 print('O código continua...')
