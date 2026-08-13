@@ -1,2 +1,2 @@
-def fala_oi():
-    print('oi')
+def falar_oi():
+    print('oi, oi, oi!')

@@ -13,4 +13,3 @@ def soma_do_modulo(x, y):
 
 
 nova_variavel = 'OK'
-# fala_oi()
