@@ -12,7 +12,9 @@
 # print(modulo.soma_do_modulo(1, 2))
 # print(variavel)
 # print(nova_variavel)
-from aula99_package.modulo import fala_oi, soma_do_modulo
+# from aula99_package.modulo import fala_oi, soma_do_modulo
 
-print(__name__)
-fala_oi()
+# import aula99_package
+from aula99_package import soma_do_modulo
+
+print(soma_do_modulo(2, 3))
