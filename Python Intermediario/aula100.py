@@ -15,3 +15,27 @@ produtos = [
 
 # Ordene os produtos por preco crescente (do menor para maior)
 # Gere produtos_ordenados_por_preco por deep copy (cópia profunda)
+
+import copy
+
+novos_produtos = copy.deepcopy(produtos)
+
+for produto in novos_produtos:
+    produto['preco'] = round(produto['preco'] * 1.1, 2)
+
+# Ordenar por nome decrescente
+produtos_ordenados_por_nome = sorted(
+    copy.deepcopy(novos_produtos),
+    key=lambda produto: produto['nome'],
+    reverse=True
+)
+
+# Ordenar por preço crescente
+produtos_ordenados_por_preco = sorted(
+    copy.deepcopy(novos_produtos),
+    key=lambda produto: produto['preco']
+)
+
+print(produtos_ordenados_por_nome)
+print()
+print(produtos_ordenados_por_preco)
