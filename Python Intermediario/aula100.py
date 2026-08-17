@@ -44,3 +44,7 @@ print(*produtos_ordenados_por_preco, sep='\n')
 #     assert novo['preco'] == esperado
 
 # print('Todos os preços foram calculados corretamente!')
+
+
+### https://www.tim.com.br/sc/para-voce/planos/pre-pago
+##48 991184908
