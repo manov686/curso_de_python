@@ -16,7 +16,7 @@ pessoas = [
 camisetas = [
     ['preta', 'branca'],
     ['p', 'm', 'g'],
-    ['masculino', 'feminino', 'unisex'],
+    ['masculino', 'feminino'],
     ['algodão', 'poliéster']
 ]
 
