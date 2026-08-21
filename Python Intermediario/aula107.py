@@ -8,3 +8,19 @@
 # ['BA', 'SP', 'MG', 'RJ']
 # Resultado
 # [('Salvador', 'BA'), ('Ubatuba', 'SP'), ('Belo Horizonte', 'MG')]
+
+cidades = ['Salvador', 'Ubatuba', 'Belo Horizonte']
+
+estados = ['BA', 'SP', 'MG', 'RJ']
+
+
+def zipper(cidades, estados):
+    resultado = []
+
+    for i in range(min(len(cidades), len(estados))):
+        resultado.append((cidades[i], estados[i]))
+
+    return resultado
+
+
+print(zipper(cidades, estados))
