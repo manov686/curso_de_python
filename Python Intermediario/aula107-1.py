@@ -9,5 +9,16 @@ lista_b     = [1, 2, 3, 4]
 =================== resultado
 lista_soma  = [2, 4, 6, 8]
 """
+lista_a = [1, 2, 3, 4, 5, 6, 7]
+lista_b = [1, 2, 3, 4]
+
+def zipper(list_a, list_b):
+    resultado = []
+
+    for i in range(min(len(list_a), len(list_b))):
+        resultado.append((list_a[i] + list_b[i]))
+
+    return resultado
 
 
+print(zipper(lista_a, lista_b))
