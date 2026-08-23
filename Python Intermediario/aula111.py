@@ -1,7 +1,7 @@
 # map, partial, GeneratorType e esgotamento de Iterators
 
 from functools import partial
-from types import GeneratorType
+# from types import GeneratorType
 
 
 # map - para mapear dados
@@ -58,4 +58,11 @@ print(
         lambda x: x * 3,
         [1, 2, 3, 4]
     ))
+)
+
+print_iter(
+    map(
+        lambda x: x * 3,
+        [1, 2, 3, 4]
+    )
 )
