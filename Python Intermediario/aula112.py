@@ -40,13 +40,19 @@ print_iter(produtos)
 
 # print(sum([produto['preco'] for produto in produtos]))
 
-def funcao_do_reduce(acumulador, produto):
-    return acumulador + produto['preco']
+# def funcao_do_reduce(acumulador, produto):
+#     return acumulador + produto['preco']
+
+# total = reduce(
+#     funcao_do_reduce,
+#     produtos,
+#     0.0
+# )
 
 total = reduce(
-    funcao_do_reduce,
+    lambda ac, p: ac + p['preco'],
     produtos,
-    0
+    0.0
 )
 
 print(f'Total: {total:.2f} R$')
