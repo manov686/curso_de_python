@@ -9,11 +9,12 @@
 # https://brasilescola.uol.com.br/matematica/fatorial.htm
 def recursiva(inicio=0, fim=4):
 
-    print(inicio, fim)
 
     # Caso base
     if inicio >= fim:
         return fim
+
+    print(inicio, fim)
 
     # Caso recursivo
     # contar até chegar ao final
