@@ -18,11 +18,15 @@
 # Vamos falar mais sobre o módulo json, mas:
 # json.dump = Gera um arquivo json
 # json.load
-caminho_arquivo = 'aula116.txt'
+
+caminho_arquivo = r'C:\Users\mano6\OneDrive\Área de Trabalho\manoel\area de trabalho'
+
+caminho_arquivo += r'\aula116.txt'
 
 # arquivo = open(caminho_arquivo, 'w')
 # #
-# arquivo.close()
+# # arquivo.close()
 with open(caminho_arquivo, 'w') as arquivo:
-    print('Olá mundo')
-    print('Arquivo vai ser fechado')
+    arquivo.write('Olá, mundo!')
+
+print(caminho_arquivo)
