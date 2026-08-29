@@ -21,7 +21,9 @@
 
 from pathlib import Path
 
-caminho_arquivo = Path('aula116.txt')
+caminho_arquivo = Path(__file__).parent / 'aula116.txt'
+
+print(caminho_arquivo)
 
 with open(caminho_arquivo, 'w') as arquivo:
     arquivo.write('Olaaaaa, mundo!')
