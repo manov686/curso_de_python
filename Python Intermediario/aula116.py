@@ -21,11 +21,7 @@
 
 from pathlib import Path
 
-caminho_arquivo = Path('arquivos') / 'aula116.txt'
-# arquivo = open(caminho_arquivo, 'w')
-# #
-# # arquivo.close()
+caminho_arquivo = Path('aula116.txt')
+
 with open(caminho_arquivo, 'w') as arquivo:
     arquivo.write('Olá, mundo!')
-
-print(caminho_arquivo)
