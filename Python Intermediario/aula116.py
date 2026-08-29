@@ -19,10 +19,9 @@
 # json.dump = Gera um arquivo json
 # json.load
 
-caminho_arquivo = r'C:\Users\mano6\OneDrive\Área de Trabalho\manoel\area de trabalho'
+from pathlib import Path
 
-caminho_arquivo += r'\aula116.txt'
-
+caminho_arquivo = Path('arquivos') / 'aula116.txt'
 # arquivo = open(caminho_arquivo, 'w')
 # #
 # # arquivo.close()
