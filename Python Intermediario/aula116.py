@@ -24,4 +24,4 @@ from pathlib import Path
 caminho_arquivo = Path('aula116.txt')
 
 with open(caminho_arquivo, 'w') as arquivo:
-    arquivo.write('Olá, mundo!')
+    arquivo.write('Olaaaaa, mundo!')
