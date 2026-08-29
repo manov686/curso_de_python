@@ -23,7 +23,19 @@ from pathlib import Path
 
 caminho_arquivo = Path(__file__).parent / 'aula116.txt'
 
-print(caminho_arquivo)
+# print(caminho_arquivo)
 
 with open(caminho_arquivo, 'w') as arquivo:
-    arquivo.write('Olaaaaa, mundo!')
+    arquivo.write(
+        'Bonjour, monde!\n'
+        )
+    arquivo.write(
+        'Linha 2\n'
+        )
+    arquivo.writelines(
+        ('Linha 3\n', 
+         'Linha 4\n')
+        )
+
+with open(caminho_arquivo, 'r') as arquivo:
+    print(arquivo.read())
