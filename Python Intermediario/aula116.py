@@ -17,25 +17,36 @@
 # os.rename - troca o nome ou move o arquivo
 # Vamos falar mais sobre o módulo json, mas:
 # json.dump = Gera um arquivo json
-# json.load
+# # json.load
 
-from pathlib import Path
+# from pathlib import Path
 
-caminho_arquivo = Path(__file__).parent / 'aula116.txt'
+# caminho_arquivo = Path(__file__).parent / 'aula116.txt'
 
-# print(caminho_arquivo)
+# # print(caminho_arquivo)
 
-with open(caminho_arquivo, 'w') as arquivo:
-    arquivo.write(
-        'Bonjour, monde!\n'
-        )
-    arquivo.write(
-        'Linha 2\n'
-        )
+# with open(caminho_arquivo, 'w') as arquivo:
+#     arquivo.write(
+#         'Bonjour, monde!\n'
+#         )
+#     arquivo.write(
+#         'Linha 2\n'
+#         )
+#     arquivo.writelines(
+#         ('Linha 3\n', 
+#          'Linha 4\n')
+#         )
+
+# with open(caminho_arquivo, 'r') as arquivo:
+#     print(arquivo.read())
+
+
+caminho_arquivo = 'aula116.txt'
+
+with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
+    arquivo.write('Atenção\n')
+    arquivo.write('Linha 1\n')
+    arquivo.write('Linha 2\n')
     arquivo.writelines(
-        ('Linha 3\n', 
-         'Linha 4\n')
-        )
-
-with open(caminho_arquivo, 'r') as arquivo:
-    print(arquivo.read())
+        ('Linha 3\n', 'Linha 4\n')
+    )
