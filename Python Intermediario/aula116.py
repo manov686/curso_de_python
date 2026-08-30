@@ -50,3 +50,9 @@ with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
     arquivo.writelines(
         ('Linha 3\n', 'Linha 4\n')
     )
+
+
+import os
+
+print(os.getcwd())
+print(os.path.abspath('aula116.txt'))
