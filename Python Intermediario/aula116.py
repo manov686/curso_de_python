@@ -56,3 +56,17 @@ with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
 
 # print(os.getcwd())
 # print(os.path.abspath('aula116.txt'))
+
+# import unicodedata
+# import re
+
+
+# def remove_accents_regex(string: str) -> str:
+#     regex = re.compile(r'[\u0300-\u036F]', flags=re.DOTALL)
+#     normalized = unicodedata.normalize('NFKD', string)
+#     return regex.sub('', normalized)
+
+
+# if __name__ == "__main__":
+#     string = 'Atenção 🐍 😀'
+#     print(remove_accents_regex(string))  # Atencao 🐍 😀
