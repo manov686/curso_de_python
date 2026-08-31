@@ -52,7 +52,7 @@ with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
     )
 
 
-import os
+# import os
 
-print(os.getcwd())
-print(os.path.abspath('aula116.txt'))
+# print(os.getcwd())
+# print(os.path.abspath('aula116.txt'))
