@@ -40,6 +40,7 @@
 # with open(caminho_arquivo, 'r') as arquivo:
 #     print(arquivo.read())
 
+# import os
 
 caminho_arquivo = 'aula116.txt'
 
@@ -51,6 +52,7 @@ with open(caminho_arquivo, 'w', encoding='utf8') as arquivo:
         ('Linha 3\n', 'Linha 4\n')
     )
 
+# os.unlink(caminho_arquivo)  # remove o arquivo
 
 # import os
 
