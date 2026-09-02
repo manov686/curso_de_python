@@ -17,7 +17,7 @@ with open('aula117.json', 'w', encoding='utf8') as arquivo:
     json.dump(
         pessoa,
         arquivo,
-        ensure_ascii=False,
+        ensure_ascii=True,
         indent=2,
     )
 
