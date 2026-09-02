@@ -21,8 +21,8 @@ with open('aula117.json', 'w', encoding='utf8') as arquivo:
         indent=2,
     )
 
-with open('aula117.json', 'r', encoding='utf8') as arquivo:
-    pessoa = json.load(arquivo)
-    # print(pessoa)
-    # print(type(pessoa))
-    print(pessoa['nome'])
+# with open('aula117.json', 'r', encoding='utf8') as arquivo:
+#     pessoa = json.load(arquivo)
+#     # print(pessoa)
+#     # print(type(pessoa))
+#     print(pessoa)
