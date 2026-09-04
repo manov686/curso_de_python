@@ -13,13 +13,48 @@ import os
 import subprocess
 
 
-def add_task(tarefa, lista=None):
-    if lista is None:
-        lista = []
-
+def add_task(tarefa, lista):
     lista.append(tarefa)
 
-    return lista
+
+def listar_tarefas(tarefas):
+    print('\nLista de tarefas:')
+
+    if not tarefas:
+        print('Nenhuma tarefa cadastrada.')
+        return
+
+    for tarefa in tarefas:
+        print(f'- {tarefa}')
+
+
+def desfazer_tarefa(tarefas, desfazer):
+    if not tarefas:
+        print('Não há tarefas para desfazer.')
+        return
+
+    tarefa = tarefas.pop()
+    desfazer.append(tarefa)
+
+    print(f'Tarefa desfeita: {tarefa}')
+
+
+def refazer_tarefa(tarefas, desfazer):
+    if not desfazer:
+        print('Não há tarefas para refazer.')
+        return
+
+    tarefa = desfazer.pop()
+    tarefas.append(tarefa)
+
+    print(f'Tarefa refeita: {tarefa}')
+
+
+def limpar_tela():
+    subprocess.run(
+        ['cls'] if os.name == 'nt' else ['clear'],
+        shell=True
+    )
 
 
 tarefas = []
@@ -29,41 +64,29 @@ desfazer = []
 while True:
 
     entrada = input(
-        'Digite uma tarefa ou comando '
+        '\nDigite uma tarefa ou comando '
         '(listar, desfazer, refazer, limpar, sair): '
-    )
+    ).strip()
+
+    if not entrada:
+        print('Digite uma tarefa ou comando válido.')
+        continue
 
     if entrada == 'listar':
 
-        print('\nLista de tarefas:')
-
-        for tarefa in tarefas:
-            print(f'- {tarefa}')
+        listar_tarefas(tarefas)
 
     elif entrada == 'desfazer':
 
-        if tarefas:
-            tarefa = tarefas.pop()
-            desfazer.append(tarefa)
-            print(f'Tarefa desfeita: {tarefa}')
-        else:
-            print('Não há tarefas para desfazer.')
+        desfazer_tarefa(tarefas, desfazer)
 
     elif entrada == 'refazer':
 
-        if desfazer:
-            tarefa = desfazer.pop()
-            tarefas.append(tarefa)
-            print(f'Tarefa refeita: {tarefa}')
-        else:
-            print('Não há tarefas para refazer.')
+        refazer_tarefa(tarefas, desfazer)
 
     elif entrada == 'limpar':
 
-        subprocess.run(
-            ['cls'] if os.name == 'nt' else ['clear'],
-            shell=True
-        )
+        limpar_tela()
 
     elif entrada == 'sair':
 
@@ -74,3 +97,5 @@ while True:
 
         add_task(entrada, tarefas)
         desfazer.clear()
+
+        print(f'Tarefa adicionada: {entrada}')
