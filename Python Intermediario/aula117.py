@@ -1,10 +1,10 @@
 import json
 
 pessoa = {
-    'nome': 'Manoel Victor',
+    'nome': 'Manoel',
     'sobrenome': 'Silveira',
     'enderecos': [
-        {'rua': 'Rua João Cruz Silva', 'numero': 32},
+        {'rua': 'Rua João Cruz', 'numero': 32},
         {'rua': 'Rua Maria Madalena', 'numero': 55},
     ],
     'altura': 1.88,
