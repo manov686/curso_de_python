@@ -71,23 +71,3 @@ while True:
     comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else \
         comandos['adicionar']
     comando()
-
-
-    # if tarefa == 'listar':
-    #     listar(tarefas)
-    #     continue
-    # elif tarefa == 'desfazer':
-    #     desfazer(tarefas, tarefas_refazer)
-    #     listar(tarefas)
-    #     continue
-    # elif tarefa == 'refazer':
-    #     refazer(tarefas, tarefas_refazer)
-    #     listar(tarefas)
-    #     continue
-    # elif tarefa == 'clear':
-    #     os.system('clear')
-    #     continue
-    # else:
-    #     adicionar(tarefa, tarefas)
-    #     listar(tarefas)
-    #     continue
