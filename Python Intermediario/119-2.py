@@ -1,6 +1,3 @@
-# desfazer = [] -> Refazer ['caminhar', 'fazer café']
-# refazer = todo ['fazer café']
-# refazer = todo ['fazer café', 'caminhar']
 import os
 import subprocess
 
