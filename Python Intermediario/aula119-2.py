@@ -56,6 +56,7 @@ def ler(tarefas, caminho_arquivo):
     with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
         tarefas_json = arquivo.read()
         tarefas.extend(json.loads(tarefas_json))
+        
 def salvar(tarefas, caminho_arquivo):
     with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
         tarefas_json = json.dumps(tarefas)
