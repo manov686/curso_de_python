@@ -1,5 +1,6 @@
 import os
 import subprocess
+import json
 
 
 def listar(tarefas):
@@ -48,11 +49,30 @@ def adicionar(tarefa, tarefas):
     tarefas.append(tarefa)
     print()
 
+def ler(tarefas, caminho_arquivo):
+    if not os.path.exists(caminho_arquivo):
+        return
+
+    with open(caminho_arquivo, 'r', encoding='utf-8') as arquivo:
+        tarefas_json = arquivo.read()
+        tarefas.extend(json.loads(tarefas_json))
+def salvar(tarefas, caminho_arquivo):
+    with open(caminho_arquivo, 'w', encoding='utf-8') as arquivo:
+        tarefas_json = json.dumps(tarefas)
+        arquivo.write(tarefas_json)
+
+def sair(tarefas, caminho_arquivo):
+    salvar(tarefas, caminho_arquivo)
+    raise SystemExit
+
 
 tarefas = []
 tarefas_refazer = []
 
+ler(tarefas, 'tarefas.json')
+
 while True:
+
     print('Comandos: listar, desfazer e refazer')
     tarefa = input('Digite uma tarefa ou comando: ')
 
@@ -64,7 +84,10 @@ while True:
             'cls' if os.name == 'nt' else 'clear', shell=True
         ),
         'adicionar': lambda: adicionar(tarefa, tarefas),
+        'sair': lambda: sair(tarefas, 'tarefas.json'),
     }
+
     comando = comandos.get(tarefa) if comandos.get(tarefa) is not None else \
         comandos['adicionar']
+
     comando()
