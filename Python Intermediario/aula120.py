@@ -9,18 +9,18 @@
 # print(string.upper())
 # print(isinstance(string, str))
 
-class Pessoa:
+class Person:
     def __init__(self, name, surname):
         self.name = name
         self.surname = surname
 
-p1 = Pessoa('Manoel', 'Silveira')
-p2 = Pessoa('Luiz', 'Otávio')
+p1 = Person('Manoel', 'Silveira')
+p2 = Person('Luiz', 'Otávio')
 
 # p1.name = 'Manoel'
 # p1.surname = 'Silveira'
 
-# p2 = Pessoa()
+# p2 = Person()
 # p2.name = 'Luiz'
 # p2.surname = 'Otávio'
 
