@@ -14,7 +14,7 @@ class Person:
         self.name = name
         self.surname = surname
 
-p1 = Person('Manoel', 'Silveira')
+p1 = Person('Manoel Victor', 'Silveira')
 p2 = Person('Luiz', 'Otávio')
 
 # p1.name = 'Manoel'
