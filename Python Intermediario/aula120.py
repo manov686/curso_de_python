@@ -8,3 +8,10 @@
 # string = 'Luiz'  # str
 # print(string.upper())
 # print(isinstance(string, str))
+
+class Pessoa:
+    ...
+
+p1 = Pessoa()
+p1.nome = 'Manoel'
+p1.sobrenome = 'Silveira'
