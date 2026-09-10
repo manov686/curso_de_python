@@ -15,3 +15,10 @@ class Pessoa:
 p1 = Pessoa()
 p1.nome = 'Manoel'
 p1.sobrenome = 'Silveira'
+
+p2 = Pessoa()
+p2.nome = 'Luiz'
+p2.sobrenome = 'Otávio'
+
+print(p1.nome, p1.sobrenome)
+print(p2.nome, p2.sobrenome)
