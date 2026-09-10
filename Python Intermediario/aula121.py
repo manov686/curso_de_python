@@ -8,7 +8,7 @@ class Car:
     def description(self):
         return f'{self.brand} {self.model}'
     def acelerate(self):
-        return f'{self.model} is acelerating!'
+        print(f'{self.model} is acelerating!')
 
 car1 = Car("Toyota", "Corolla")
 car2 = Car("Honda", "Civic")
@@ -22,6 +22,6 @@ car3 = Car("Volkwagen", "Beetle")
 # print(f'Carro 2:  {car2.model}')
 # print(f'Carro 3:  {car3.model}')
 
-print(car1.acelerate())
-print(car2.acelerate())
-print(car3.acelerate())
+car1.acelerate()
+car2.acelerate()
+car3.acelerate()
