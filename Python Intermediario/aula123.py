@@ -11,7 +11,7 @@ class Animal:
 
 animal1 = Animal('tigre')
 
-# print(Animal.nome)          # acessando atributo de classe
-print(animal1.nome)           # acessando atributo de instância
-# print(animal1.acao('carne'))  # acessando método da instância
+# print(Animal.nome)              # acessando atributo de classe
+print(animal1.nome)               # acessando atributo de instância
+# print(animal1.acao('carne'))    # acessando método da instância
 print(animal1.executar('carne'))  # acessando método da instância através do método executar
