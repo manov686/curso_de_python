@@ -13,3 +13,4 @@ dados_p1 = {'nome': 'Manoel', 'idade': 35}
 p1 = Pessoa(**dados_p1)  # Desempacotando o dicionário para criar o objeto p1
 # p1 = Pessoa('Manoel', 35)
 print(p1.__dict__)  # Mostra os atributos de instância do objeto p1
+print(vars(p1))  # Mostra os atributos de instância do objeto p1
