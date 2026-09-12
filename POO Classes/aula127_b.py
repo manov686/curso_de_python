@@ -7,12 +7,12 @@ p1 = Pessoa('Manoel', 35)
 p2 = Pessoa('Maria', 28)
 p3 = Pessoa('José', 42)
 
-pessoas = [p1, p2, p3]
+pessoas = [vars(p1), vars(p2), vars(p3)]
 
 dados = [
     {
-        'nome': pessoa.nome,
-        'idade': pessoa.idade
+        'nome': pessoa['nome'],
+        'idade': pessoa['idade']
     }
     for pessoa in pessoas
 ]
