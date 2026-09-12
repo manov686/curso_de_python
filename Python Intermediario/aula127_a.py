@@ -3,6 +3,7 @@
 # e depois crie novamente as instâncias
 # da classe com os dados salvos
 # Faça em arquivos separados.
+# from datetime import datetime
 
 class Pessoa:
     def __init__(self, nome, idade):
