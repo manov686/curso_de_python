@@ -10,9 +10,10 @@ class Person:
         self.idade = age
 
     @classmethod
-
     def metodo_de_classe(cls, name, age):
         return cls(name, age)
 
-p1 = Person('Luiz', 30)
-# print(p1.metodo_de_classe())
+p1 = Person.metodo_de_classe('Luiz', 30)
+p2 = Person.metodo_de_classe('Maria', 20)
+print(p1.nome, p1.idade)
+print(p2.nome, p2.idade)
