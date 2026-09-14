@@ -32,11 +32,15 @@ class Connection:
         if not any(char.islower() for char in password):
             raise ValueError('Password must contain at least one lowercase letter')
         return True
+    
+    @staticmethod
+    def log(message):
+        print(f'LOG: {message}')
 
 c1 = Connection.create_with_auth('root', 'S1spta251')
 # c1 = Connection()
 # c1.set_user('root')
 # c1.set_password('S1spta251')
-
-print(c1.user)
-print(c1.password)
+print(Connection.log('Vai dar mensagem de None abaixo XD'))
+print(f'User: {c1.user}')
+print(f'Password: {c1.password}')
