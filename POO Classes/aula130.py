@@ -14,6 +14,17 @@ class Connection:
     def set_password(self, password):
         self.password = password
 
-c1 = Connection()
-c1.set_user('root')
-c1.set_password('s1spta251')
+    @classmethod
+    def create_with_auth(cls, user, password):
+        connection = cls()
+        connection.user = user
+        connection.password = password
+        return connection
+
+c1 = Connection.create_with_auth('root', 's1spta251')
+# c1 = Connection()
+# c1.set_user('root')
+# c1.set_password('s1spta251')
+
+print(c1.user)
+print(c1.password)
