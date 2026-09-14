@@ -21,10 +21,22 @@ class Connection:
         connection.password = password
         return connection
 
-c1 = Connection.create_with_auth('root', 's1spta251')
+    @staticmethod
+    def validate_password(password):
+        if len(password) < 8:
+            raise ValueError('Password must be at least 8 characters long')
+        if not any(char.isdigit() for char in password):
+            raise ValueError('Password must contain at least one digit')
+        if not any(char.isupper() for char in password):
+            raise ValueError('Password must contain at least one uppercase letter')
+        if not any(char.islower() for char in password):
+            raise ValueError('Password must contain at least one lowercase letter')
+        return True
+
+c1 = Connection.create_with_auth('root', 'S1spta251')
 # c1 = Connection()
 # c1.set_user('root')
-# c1.set_password('s1spta251')
+# c1.set_password('S1spta251')
 
 print(c1.user)
 print(c1.password)
