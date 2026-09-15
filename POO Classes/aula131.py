@@ -11,6 +11,7 @@
 # - p/ habilitar setter
 # - p/ executar ações ao obter um atributo
 # Código cliente - é o código que usa seu código
+
 class Caneta:
     def __init__(self, cor):
         self.cor_tinta = cor
