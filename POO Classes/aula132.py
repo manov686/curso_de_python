@@ -9,5 +9,18 @@
 class Caneta:
     def __init__(self, cor):
         # private protected
-        self.cor = cor
-        self._cor_tampa = None
+        self._cor = cor
+
+    @property
+    def cor(self):
+        print('PROPERTY')
+        return self._cor
+
+    @cor.setter
+    def cor(self, valor):
+        print('SETTER', valor)
+        self._cor = valor
+
+caneta = Caneta('Azul')
+caneta.cor = 'Vermelho'
+print(caneta.cor)
