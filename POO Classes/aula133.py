@@ -15,4 +15,24 @@ from functools import partial
 
 
 class Foo:
-    ...
+    def __init__(self):
+        self.public = 'isso é público'
+        self._protected = 'isso é protegido'
+        self.__private = 'isso é privado'
+
+        self._method_protected()
+
+    def public_method(self):
+        # return 'isso é um método público'
+        print(self.__private)
+        return '__private'
+    
+    def _method_protected(self):
+        print('isso é um método protegido')
+        return 'isso é protegido'
+
+f = Foo()
+
+print(f.public_method())
+# print(f.public)
+# print(f.public_method())
