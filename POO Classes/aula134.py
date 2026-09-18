@@ -24,6 +24,20 @@ class FerramentaDeEscrita:
     def __init__ (self, nome) -> None:
         self.nome = nome    
 
-escritor = Escritor("Victor")
-ferramenta = FerramentaDeEscrita("Caneta")
-escritor.ferramenta = ferramenta
+    def escrever(self):
+        return f'{self.nome} está sendo usada para escrever'
+        
+    def escrever(self, escritor):
+        return f'{escritor.nome} está usando {self.nome} para escrever'
+
+escritor1 = Escritor("Victor")
+ferramenta1 = FerramentaDeEscrita("caneta preta")
+escritor1.ferramenta1 = ferramenta1
+
+escritor2 = Escritor("Manoel")
+ferramenta2 = FerramentaDeEscrita("lápis")
+escritor2.ferramenta2 = ferramenta2 
+
+# print(ferramenta.escrever()) 
+print(escritor1.ferramenta1.escrever(escritor1))
+print(escritor2.ferramenta2.escrever(escritor2))
