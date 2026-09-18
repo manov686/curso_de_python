@@ -15,7 +15,6 @@
 #### CÓDIGO DO TEACHER:####
 from functools import partial
 
-
 class Foo:
     def __init__(self):
         self.public = 'isso é público'
@@ -36,7 +35,6 @@ class Foo:
     def __metodo_private(self):
         print('__metodo_private')
         return '__metodo_private'
-
 
 f = Foo()
 # print(f.public)
