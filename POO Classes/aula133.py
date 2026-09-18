@@ -12,6 +12,7 @@
 #       só DEVE ser usado na classe em que foi
 #       declarado.
 
+#### CÓDIGO DO TEACHER:####
 from functools import partial
 
 
@@ -39,11 +40,13 @@ class Foo:
 
 f = Foo()
 # print(f.public)
-print(f.metodo_publico())
+# print(f.metodo_publico())
+# print(f.__metodo_private())  # AttributeError: 'Foo' object has no attribute '__metodo_private'
+print(f._Foo__metodo_private())  # isso funciona, mas não é recomendado
 
 
+#### MEU CÓDIGO:####
 # from functools import partial
-
 
 # class Foo:
 #     def __init__(self):
