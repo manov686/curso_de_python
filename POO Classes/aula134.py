@@ -30,11 +30,11 @@ class FerramentaDeEscrita:
     def escrever(self, escritor):
         return f'{escritor.nome} está usando {self.nome} para escrever'
 
-escritor1 = Escritor("Victor")
+escritor1 = Escritor("Manoel")
 ferramenta1 = FerramentaDeEscrita("caneta preta")
 escritor1.ferramenta = ferramenta1
 
-escritor2 = Escritor("Manoel")
+escritor2 = Escritor("Victor")
 ferramenta2 = FerramentaDeEscrita("lápis")
 escritor2.ferramenta = ferramenta2 
 
