@@ -44,7 +44,6 @@ print(f._Foo__metodo_private())  # isso funciona, mas não é recomendado
 
 
 #### MEU CÓDIGO:####
-# from functools import partial
 
 # class Foo:
 #     def __init__(self):
