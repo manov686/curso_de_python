@@ -39,6 +39,7 @@ car1 = Car('Mustang', manufacturer1, motor1)
 motor2 = Motor('3 Cilinders', 100)
 manufacturer2 = Manufacturer('GM Chevrolet')
 car2 = Car('Onix', manufacturer2, motor2)
+# car2 = Car('Onix', manufacturer2, motor1)
 
 
 car1.list_car()
