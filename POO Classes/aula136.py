@@ -10,7 +10,7 @@ class Client:
         self.adresses = []
 
     def add_address(self, street, number):
-        self.adresses.append()
+        self.adresses.append(Address(street, number))
 
 class Address:
     def __init__(self, street, number):
