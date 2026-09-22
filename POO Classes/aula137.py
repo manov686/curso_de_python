@@ -41,18 +41,30 @@ class Manufacturer:
 
 
 motor1 = Motor('V8', 500)
-motor2 = Motor('3 Cilinders', 100)
+motor2 = Motor('1.0', 100)
+motor3 = Motor('2.0', 190)
 
-manufacturer1 = Manufacturer('Ford')
-manufacturer2 = Manufacturer('GM Chevrolet')
+ford = Manufacturer('Ford')
+chevrolet = Manufacturer('GM Chevrolet')
+fiat = Manufacturer('Fiat')
 
-car1 = Car('Mustang')
-car1.brand = manufacturer1
-car1.motor = motor1
+mustang = Car('Mustang')
+mustang.brand = ford
+mustang.motor = motor1
 
-car2 = Car('Onix')
-car2.brand = manufacturer2
-car2.motor = motor2
+onix = Car('Onix')
+onix.brand = chevrolet
+onix.motor = motor2
 
-car1.list_car()
-car2.list_car()
+focus = Car('Focus')
+focus.brand = ford
+focus.motor = motor3
+
+uno = Car('Uno')
+uno.brand = fiat
+uno.motor = motor2
+
+mustang.list_car()
+onix.list_car()
+focus.list_car()
+uno.list_car()
