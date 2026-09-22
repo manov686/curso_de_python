@@ -1,10 +1,26 @@
 ## Exercicio aula  137
 
 class Car:
-    def __init__(self, name, brand, motor):
+    def __init__(self, name):
         self.name = name
-        self.brand = brand
-        self.motor = motor
+        self._motor = None
+        self._brand = None
+
+    @property
+    def motor(self):
+        return self._motor
+
+    @motor.setter
+    def motor(self, value):
+        self._motor = value
+
+    @property
+    def brand(self):
+        return self._brand
+
+    @brand.setter
+    def brand(self, value):
+        self._brand = value
 
     def list_car(self):
         print(
@@ -20,27 +36,25 @@ class Motor:
         self.name = name
         self.power = power
 
-    def list_motor(self):
-        print(f'Motor: {self.name}, Power: {self.power}')
-
 
 class Manufacturer:
     def __init__(self, name):
         self.name = name
 
-    def list_manufacturer(self):
-        print(f'Manufacturer: {self.name}')
-
 
 motor1 = Motor('V8', 500)
-manufacturer1 = Manufacturer('Ford')
-car1 = Car('Mustang', manufacturer1, motor1)
-
 motor2 = Motor('3 Cilinders', 100)
-manufacturer2 = Manufacturer('GM Chevrolet')
-car2 = Car('Onix', manufacturer2, motor2)
-# car2 = Car('Onix', manufacturer2, motor1)
 
+manufacturer1 = Manufacturer('Ford')
+manufacturer2 = Manufacturer('GM Chevrolet')
+
+car1 = Car('Mustang')
+car1.brand = manufacturer1
+car1.motor = motor1
+
+car2 = Car('Onix')
+car2.brand = manufacturer2
+car2.motor = motor2
 
 car1.list_car()
 car2.list_car()
