@@ -30,12 +30,10 @@ class Car:
             f'Power: {self.motor.power}'
         )
 
-
 class Motor:
     def __init__(self, name, power):
         self.name = name
         self.power = power
-
 
 class Manufacturer:
     def __init__(self, name):
