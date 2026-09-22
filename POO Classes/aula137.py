@@ -24,8 +24,8 @@ class Car:
 
     def list_car(self):
         print(
-            f'Car: {self.name}, '
-            f'Brand: {self.brand.name}, '
+            f'{self.brand.name} '
+            f'{self.name}, '
             f'Motor: {self.motor.name}, '
             f'Power: {self.motor.power}'
         )
