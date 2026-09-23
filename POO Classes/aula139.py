@@ -27,6 +27,7 @@ class B(A):
 class C(B):
     atributo_c = 'valor c'
     def metodo(self):
+        super(B, self).metodo()
         super().metodo()
         print('C')
 
