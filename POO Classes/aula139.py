@@ -27,12 +27,15 @@ class B(A):
 class C(B):
     atributo_c = 'valor c'
     def metodo(self):
-        super(B, self).metodo()
-        super().metodo()
+        super(B, self).metodo() # A C
+        super().metodo() # B
         print('C')
 
-c = C()
+# print(C.mro())
+
 # print(c.atributo_a)
 # print(c.atributo_b)
 # print(c.atributo_c)
+
+c = C()
 c.metodo()
