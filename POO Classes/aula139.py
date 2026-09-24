@@ -10,12 +10,15 @@
 #         print('DEPOIS DO UPPER')
 #         return retorno
 
-
 # string = MinhaString('Luiz')
 # print(string.upper())
 
 class A:
     atributo_a = 'valor a'
+
+    def __init__(self, atributo):
+        self.atributo = atributo
+    
     def metodo(self):
         print('A')
 
@@ -27,15 +30,14 @@ class B(A):
 class C(B):
     atributo_c = 'valor c'
     def metodo(self):
-        super(B, self).metodo() # A C
-        super().metodo() # B
+        # super(B, self).metodo() # A C
+        # super().metodo() # B
         print('C')
 
 # print(C.mro())
-
+c = C('atributo')
+print(c.atributo)
 # print(c.atributo_a)
 # print(c.atributo_b)
 # print(c.atributo_c)
-
-c = C()
-c.metodo()
+# c.metodo()
