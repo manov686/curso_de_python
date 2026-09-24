@@ -29,6 +29,11 @@ class B(A):
 
 class C(B):
     atributo_c = 'valor c'
+
+    def __init__(self, *args, **kwargs):
+        print('Ei, burlei!')
+        super().__init__(*args, **kwargs)
+
     def metodo(self):
         # super(B, self).metodo() # A C
         # super().metodo() # B
