@@ -1,1 +1,3 @@
-python aula141\main.py
+print('oi')
+
+# python aula141\main.py
