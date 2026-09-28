@@ -6,6 +6,9 @@ class Log:
     def log_error(self, msg):
         self._log(f'Error: {msg}')
 
+    def log_sucess(self, msg):
+        self._log(f'Sucess: {msg}')
+
 
 class LogFileMixin(Log):
     def _log(self, msg):
@@ -20,3 +23,4 @@ class LogPrintMixin(Log):
 if __name__ == '__main__':
     l = LogPrintMixin()
     l.log_error('cualqué coza')
+    l.log_sucess('Topper')
