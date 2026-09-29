@@ -22,5 +22,5 @@ class LogPrintMixin(Log):
 
 if __name__ == '__main__':
     l = LogPrintMixin()
-    l.log_error('cualqué coza')
-    l.log_sucess('Topper')
+    l.log_error('Anything')
+    l.log_sucess('Nice')
