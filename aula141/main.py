@@ -1,3 +1,9 @@
-from log import Log
+# from log import Log
+# # python aula141\main.py
+from eletronico import Smartphone
 
-# python aula141\main.py
+xiaomi = Smartphone('Xiaomi Redmi 14')
+iphone = Smartphone('Iphone 22')
+
+xiaomi.desligar()
+iphone.ligar()
