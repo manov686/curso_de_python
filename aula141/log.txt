@@ -1,3 +1,5 @@
 Success: Nice (LogFileMixing)
 Error: Anything (LogFileMixing)
 Success: Nice (LogFileMixing)
+Success: Iphone 22 est· ligado (Smartphone)
+Success: Iphone 22 est√° ligado (Smartphone)
