@@ -26,6 +26,6 @@ class Smartphone(Eletronico, LogFileMixing):
      def desligar(self):
           super().desligar()
 
-          if self._ligado:
+          if not self._ligado:
                msg = f'{self._nome} está desligado'
                self.log_success(msg)

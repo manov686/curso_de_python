@@ -5,5 +5,5 @@ from eletronico import Smartphone
 xiaomi = Smartphone('Xiaomi Redmi 14')
 iphone = Smartphone('Iphone 22')
 
-xiaomi.desligar()
-iphone.ligar()
+xiaomi.ligar()
+iphone.desligar()
