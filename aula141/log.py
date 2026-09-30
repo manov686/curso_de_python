@@ -1,5 +1,8 @@
 # Abstração
+from pathlib import Path
 from datetime import datetime
+
+LOG_FILE = Path(__file__).parent / 'log.txt'
 
 
 class Log:
@@ -12,6 +15,14 @@ class Log:
     def log_success(self, msg):
         self._log(f'Success: {msg}')
 
+class LogFileMixing(Log):
+    def _log(self, msg):
+        msg_formatada = f'{msg} ({self.__class__.__name__})'
+        print('Salvando no log...', msg_formatada)
+        with open(LOG_FILE, 'a') as arquivo:
+            arquivo.write(msg_formatada)
+            arquivo.write('\r\n')
+
 
 class LogPrintMixin(Log):
     def _log(self, msg):
@@ -21,6 +32,8 @@ class LogPrintMixin(Log):
 
 if __name__ == '__main__':
     log = LogPrintMixin()
-
     log.log_error('Anything')
     log.log_success('Nice')
+    lf = LogFileMixing()
+    lf.log_error('Anything')
+    lf.log_success('Nice')
