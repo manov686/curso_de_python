@@ -16,3 +16,20 @@
 # use @abstractmethod como decorator mais interno.
 
 from abc import ABC, abstractmethod
+from datetime import datetime
+
+class Log(ABC):
+    @abstractmethod
+    def _log(self, msg):
+        raise NotImplementedError('Implemente o método _log')
+
+    def log_error(self, msg):
+        self._log(f'Error: {msg}')
+
+    def log_success(self, msg):
+        self._log(f'Success: {msg}')
+        
+class LogPrintMixing(Log):
+    def _log(self, msg):
+        timestamp = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+        print(f'[{timestamp}] {msg} ({self.__class__.__name__})')
