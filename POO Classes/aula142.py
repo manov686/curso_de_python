@@ -16,11 +16,10 @@
 # use @abstractmethod como decorator mais interno.
 
 from abc import ABC, abstractmethod
-from datetime import datetime
 
 class Log(ABC):
     @abstractmethod
-    def _log(self, msg):...
+    def _log(self, msg): ...
 
     def log_error(self, msg):
         self._log(f'Error: {msg}')
@@ -30,5 +29,7 @@ class Log(ABC):
         
 class LogPrintMixing(Log):
     def _log(self, msg):
-        timestamp = datetime.now().strftime('%d/%m/%Y %H:%M:%S')
-        print(f'[{timestamp}] {msg} ({self.__class__.__name__})')
+        print(f'[{msg} ({self.__class__.__name__})]')
+
+l = LogPrintMixing()
+l.log_error('Um erro ocorreu')
