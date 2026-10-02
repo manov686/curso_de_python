@@ -20,8 +20,7 @@ from datetime import datetime
 
 class Log(ABC):
     @abstractmethod
-    def _log(self, msg):
-        raise NotImplementedError('Implemente o método _log')
+    def _log(self, msg):...
 
     def log_error(self, msg):
         self._log(f'Error: {msg}')
