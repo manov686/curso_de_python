@@ -1,9 +1,12 @@
 from abc import ABC, abstractmethod
 
 class AbstractFoo(ABC):
-    @abstractmethod
-    def do_something(self, name):
-        self.name = name
+    def __init__(self, name):
+        self._name = name
+
+    @property
+    def name(self):
+        ...
 
 
 
