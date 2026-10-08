@@ -1,17 +1,24 @@
 from abc import ABC, abstractmethod
 
+
 class AbstractFoo(ABC):
     def __init__(self, name):
-        self._name = name
+        self.name = name
 
     @property
     def name(self):
         ...
+    @name.setter
+    def name(self, name):
+        ...
 
+class Foo(AbstractFoo):
+    def __init__(self, name):
+        super().__init__(name)
+        print('sou inutil')
 
-
-
-
+foo = Foo('Bar')
+print(foo.name)
 
 
 # class Log(ABC):
