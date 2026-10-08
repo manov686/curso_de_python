@@ -4,19 +4,20 @@ from abc import ABC, abstractmethod
 class AbstractFoo(ABC):
     def __init__(self, name):
         self.name = name
+        self._name = None
 
     @property
     def name(self):
-        return 123
+        return self._name
     
     @name.setter
     def name(self, name):
-        ...
+        self._name = name
 
 class Foo(AbstractFoo):
     def __init__(self, name):
         super().__init__(name)
-        print('sou inutil')
+        # print('sou inutil')
 
 foo = Foo('Bar')
 print(foo.name)
