@@ -7,7 +7,8 @@ class AbstractFoo(ABC):
 
     @property
     def name(self):
-        ...
+        return 123
+    
     @name.setter
     def name(self, name):
         ...
