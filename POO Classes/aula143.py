@@ -11,11 +11,12 @@ class AbstractFoo(ABC):
     def name(self):...
     
 class Foo(AbstractFoo):
-    name = ''
+    name = '' ### isso substitui a propriedade name da classe abstrata, mas não é o mesmo que sobrescrever o método name da classe abstrata
+
     def __init__(self, name):
         super().__init__(name)
-        # print('sou inutil')
 
+    #### codigo abaixo foi substituido pelo atributo name da classe Foo, mas não é o mesmo que sobrescrever o método name da classe abstrata
     # @property
     # def name(self):
     #     return self._name
