@@ -24,12 +24,14 @@ class Notificacao(ABC):
     def enviar(self) -> bool: ...
 
 class NotificacaoEmail(Notificacao):
-    def enviar(self):
+    def enviar(self) -> bool:
         print('Enviando email com a mensagem:', {self.mensagem})
+        return True
 
 class NotificacaoSMS(Notificacao):
-    def enviar(self):
+    def enviar(self) -> bool:
         print('Enviando SMS com a mensagem:', {self.mensagem})
+        return False
 
 def notificar(notificacao: Notificacao):
     notificacao_enviada = notificacao.enviar()
@@ -38,9 +40,10 @@ def notificar(notificacao: Notificacao):
         print('Notificação enviada com sucesso!')
     else:
         print('Falha ao enviar notificação!')
+        
 
 notificacao_email = NotificacaoEmail('Email enviado com sucesso!')
-notificar(NotificacaoEmail('Email enviado com sucesso!'))
+notificar(notificacao_email)
 
 notificacao_sms = NotificacaoSMS('SMS enviado com sucesso!')
-notificar(NotificacaoSMS('SMS enviado com sucesso!'))
+notificar(notificacao_sms)
