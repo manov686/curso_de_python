@@ -14,5 +14,8 @@
 # Sobrecarga de métodos (overload)  🐍 = ❌
 # Sobreposição de métodos (override) 🐍 = ✅
 class Notificacao:
-    def __init__(self, mensagem):
+    def __init__(self, mensagem) -> None:
         self.mensagem = mensagem
+
+    def enviar(self):
+        raise NotImplementedError("O método enviar() deve ser implementado na subclasse.")
