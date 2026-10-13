@@ -42,8 +42,8 @@ def notificar(notificacao: Notificacao):
         print('Falha ao enviar notificação!')
         
 
-notificacao_email = NotificacaoEmail('Email enviado com sucesso!')
+notificacao_email = NotificacaoEmail('Enviando e-mail...')
 notificar(notificacao_email)
 
-notificacao_sms = NotificacaoSMS('SMS enviado com sucesso!')
+notificacao_sms = NotificacaoSMS('Enviando SMS...')
 notificar(notificacao_sms)
