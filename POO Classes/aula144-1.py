@@ -13,9 +13,12 @@
 # por objetos de uma subclasse sem quebrar a aplicação.
 # Sobrecarga de métodos (overload)  🐍 = ❌
 # Sobreposição de métodos (override) 🐍 = ✅
-class Notificacao:
-    def __init__(self, mensagem) -> None:
+
+from abc import ABC, abstractmethod
+
+class Notificacao(ABC):
+    def __init__(self, mensagem):
         self.mensagem = mensagem
 
-    def enviar(self):
-        raise NotImplementedError("O método enviar() deve ser implementado na subclasse.")
+    @abstractmethod
+    def enviar(self) -> bool: ...
