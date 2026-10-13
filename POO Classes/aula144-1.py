@@ -22,3 +22,16 @@ class Notificacao(ABC):
 
     @abstractmethod
     def enviar(self) -> bool: ...
+
+class NotificacaoEmail(Notificacao):
+    def enviar(self):
+        print('Enviando email com a mensagem:', {self.mensagem})
+
+class NotificacaoSMS(Notificacao):
+    def enviar(self):
+        print('Enviando SMS com a mensagem:', {self.mensagem})
+
+n = NotificacaoSMS('testando')
+
+
+n.enviar()
