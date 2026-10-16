@@ -8,6 +8,6 @@
 # Relançando exceções
 # Adicionando notas em exceções (3.11.0)
 
-class MeuError(Exception):
+class MyError(Exception):
     
     ...
