@@ -9,5 +9,7 @@
 # Adicionando notas em exceções (3.11.0)
 
 class MyError(Exception):
-    
-    ...
+     ...
+
+def raise_error():
+    raise MyError("Mensagem de erro")
