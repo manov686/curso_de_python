@@ -12,4 +12,11 @@ class MyError(Exception):
      ...
 
 def raise_error():
-    raise MyError("Mensagem de erro")
+    exception_note = MyError('a', 'b', 'c')
+    raise exception_note
+
+try:
+    raise_error()
+except MyError as e:
+    print(f"Erro: {e}")
+    raise  # relança a exceção
