@@ -11,12 +11,18 @@
 class MyError(Exception):
      ...
 
+class MyError2(Exception):
+    ...
+
 def raise_error():
     exception_note = MyError('a', 'b', 'c')
     raise exception_note
 
 try:
     raise_error()
-except MyError as e:
-    print(f"Erro: {e}")
-    raise  # relança a exceção
+except (MyError, ZeroDivisionError) as e:
+    print(e.__class__.__name__)
+    print(f"Erro: {e.args}")
+    print()
+    exception_note = MyError2('ovo mandar dinovo')
+    raise exception_note from e
