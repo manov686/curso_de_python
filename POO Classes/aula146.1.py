@@ -22,6 +22,7 @@ def levantar():
 try:
     levantar()
 except (MyError, ZeroDivisionError) as error:
+    print(error.__class__.__name__)
     print(error.args)
     print()
     exception_ = MyError2('Vou lançar de novo')
