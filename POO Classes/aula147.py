@@ -21,6 +21,9 @@ class Ponto:
         self.x = x
         self.y = y
 
+    def __str__(self):
+        return f'({self.x}, {self.y})'
+
     def __repr__(self):
         class_name = type(self).__name__
         return f'{class_name}(x={self.x}, y={self.y})'
@@ -31,3 +34,6 @@ p2 = Ponto(3, 4)
 
 print(p1)
 print(p2)
+
+print(repr(p1))
+print(repr(p2))
