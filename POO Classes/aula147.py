@@ -36,4 +36,4 @@ print(p1)
 print(p2)
 
 print(repr(p1))
-print(repr(p2))
+print(f'{p2!r}')  # f-string com !r chama o __repr__() do objeto
