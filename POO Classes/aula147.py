@@ -31,7 +31,9 @@ class Ponto:
 
 p1 = Ponto(1, 2)
 p2 = Ponto(3, 4)
+p3 = p1 + p2
 
+print(p3)  # TypeError: unsupported operand type(s) for +: 'Ponto' and 'Ponto'
 print(p1)
 print(p2)
 
