@@ -28,14 +28,19 @@ class Ponto:
         class_name = type(self).__name__
         return f'{class_name}(x={self.x}, y={self.y})'
 
+    def __add__(self, other):
+        if isinstance(other, Ponto):
+            return Ponto(self.x + other.x, self.y + other.y)
+        return NotImplemented
 
-p1 = Ponto(1, 2)
-p2 = Ponto(3, 4)
-p3 = p1 + p2
+if __name__ == '__main__':
+    p1 = Ponto(1, 2)
+    p2 = Ponto(3, 4)
+    p3 = p1 + p2
 
-print(p3)  # TypeError: unsupported operand type(s) for +: 'Ponto' and 'Ponto'
-print(p1)
-print(p2)
+    print(p3)  # (4, 6)
+    print(p1)
+    print(p2)
 
 print(repr(p1))
 print(f'{p2!r}')  # f-string com !r chama o __repr__() do objeto
