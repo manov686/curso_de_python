@@ -34,13 +34,13 @@ class Ponto:
         return Ponto(novo_x, novo_y)
 
 if __name__ == '__main__':
-    p1 = Ponto(1, 2)
-    p2 = Ponto(3, 4)
+    p1 = Ponto(4, 2)
+    p2 = Ponto(6, 4)
     p3 = p1 + p2
 
-    print(p3)  # (4, 6)
-    print(p1)
-    print(p2)
+    print(p3)  # (10, 6)
+    # print(p1)
+    # print(p2)
 
 print(repr(p1))
 print(f'{p2!r}')  # f-string com !r chama o __repr__() do objeto
