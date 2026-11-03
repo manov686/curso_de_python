@@ -29,9 +29,9 @@ class Ponto:
         return f'{class_name}(x={self.x}, y={self.y})'
 
     def __add__(self, other):
-        if isinstance(other, Ponto):
-            return Ponto(self.x + other.x, self.y + other.y)
-        return NotImplemented
+        novo_x = self.x + other.x
+        novo_y = self.y + other.y
+        return Ponto(novo_x, novo_y)
 
 if __name__ == '__main__':
     p1 = Ponto(1, 2)
