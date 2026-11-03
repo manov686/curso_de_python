@@ -44,7 +44,8 @@ if __name__ == '__main__':
     p3 = p1 + p2
 
     print(p3)  # (10, 6)
-    print('P1 é maior que P2?', p1 > p2)  # False
+    print('p1 é maior que p2?', p1 > p2)  # False
+    print('p2 é maior que p1?', p2 > p1)  # True
     # print(p1)
     # print(p2)
 
