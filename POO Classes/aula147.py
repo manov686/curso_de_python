@@ -33,12 +33,18 @@ class Ponto:
         novo_y = self.y + other.y
         return Ponto(novo_x, novo_y)
 
+    def __gt__(self, other):
+        result_self = self.x + self.y
+        result_other = other.x + other.y
+        return result_self > result_other
+
 if __name__ == '__main__':
-    p1 = Ponto(4, 2)
-    p2 = Ponto(6, 4)
+    p1 = Ponto(4, 2) #6
+    p2 = Ponto(6, 4) #10
     p3 = p1 + p2
 
     print(p3)  # (10, 6)
+    print('P1 é maior que P2?', p1 > p2)  # False
     # print(p1)
     # print(p2)
 
